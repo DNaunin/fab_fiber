@@ -1,4 +1,5 @@
 import { ReactNode, useState } from "react"
+import { getFiberContent } from "../getFiberContent";
 
 interface FormProps {
     onSubmit: (value: string) => void;
@@ -6,13 +7,14 @@ interface FormProps {
 
 export default function Form({onSubmit}: FormProps): JSX.Element {
     const [inputValue, setInputValue] = useState<string>('');
-
+    const [fiberContent, setfiberContent] = useState('');
     const handleSubmit = (e: React.FormEvent) => {
       e.preventDefault();
-      onSubmit(inputValue);
+      setfiberContent(getFiberContent(inputValue));
       setInputValue('');
     };
     return (
+      <>
         <form onSubmit={handleSubmit}>
           <input
             type="text"
@@ -22,5 +24,7 @@ export default function Form({onSubmit}: FormProps): JSX.Element {
           />
           <button type="submit">Submit</button>
         </form>
+        <div>{fiberContent}</div>
+        </>
       );
 }
