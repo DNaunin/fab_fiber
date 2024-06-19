@@ -1,6 +1,19 @@
-# Getting Started with Create React App
+# Fabulous Fiber App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This App is finding out the fiber contents of food items for you. 
+
+## Features 
+
+### Implemented Features
+There is a second feature which tells you if the food item is considered low FODMAP. FODMAPs or fermentable oligosaccharides, disaccharides, monosaccharides, and polyols are short-chain carbohydrates. A low FODMAP diet can be helpful for certain stomach and intestinal problems like SIBO or IBS.
+
+### Future Features
+A future feature shall allow you to save your daily food intake in order for you to find out how much fiber you had that day. 
+
+
+## Data
+
+Right now I am still using my own data, no API. 
 
 ## Available Scripts
 
