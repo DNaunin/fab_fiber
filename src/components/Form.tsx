@@ -17,7 +17,10 @@ export default function Form({onSubmit}: FormProps): JSX.Element {
       setInputValue('');
     };
     return (
-      <>
+      <div>
+        <h2>
+          Find out fiber contents
+        </h2>
         <form onSubmit={handleSubmit}>
           <input
             type="text"
@@ -25,10 +28,11 @@ export default function Form({onSubmit}: FormProps): JSX.Element {
             onChange={(e) => setInputValue(e.target.value)}
             placeholder="Enter your text here"
           />
-          <button type="submit">Tell me about this food item!</button>
+          <br></br> 
+          <button type="submit">Info</button>
         </form>
         <div>{fiberContent}</div>
         <div>{lowFodmap}</div>
-        </>
+        </div>
       );
 }

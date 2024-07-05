@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Form from './components/Form'
+import DropDownMenu from './components/DropDownMenu';
 
 function App() {
   const handleSubmit = (value: string) => {
@@ -10,10 +11,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-       <a>
-          Find out fiber contents
-        </a>
         <Form onSubmit={handleSubmit} />
+        <DropDownMenu />
       </header>
     </div>
   );
